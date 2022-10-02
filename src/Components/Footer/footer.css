@@ -1,0 +1,20 @@
+.foot {
+  color: rgb(115, 170, 63) !important;
+  font-size: 20px;
+}
+
+.foot:hover {
+  color: black !important;
+}
+
+.quicklink {
+  font-size: 22px !important;
+}
+
+.col {
+  padding: 10px;
+}
+
+.icon {
+  margin-right: 10px !important;
+}
