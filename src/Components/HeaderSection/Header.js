@@ -1,10 +1,11 @@
 import React from "react";
 import icon from "../images/icon.png";
 import "./header.css";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import RateDriver from "../Customer/RateDriver.js";
 
-export default function Header() {
+export default function Header ()
+{
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,7 +30,7 @@ export default function Header() {
                 <a
                   className="nav-link active"
                   aria-current="page"
-                  href="Header.js"
+                  href="/"
                 >
                   Home
                 </a>
@@ -40,16 +41,20 @@ export default function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/customerDetails">
+                  AddCustomer
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/ride">
                   Book a ride
                 </a>
               </li>
-
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#">
                   Add your cab details
                 </a>
-              </li>
+              </li> */}
             </ul>
             <form className="d-flex loginbtn">
               <button className="btn btn-outline-success " type="submit">
