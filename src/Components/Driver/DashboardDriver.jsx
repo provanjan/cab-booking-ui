@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import history from "../images/history.png";
 import book from "../images/book.png";
 import edit from "../images/edit.png";
+import icon from "../images/icon.png"
 import "./driver.css";
 
 export default function DashboardDriver ()
@@ -35,6 +36,12 @@ export default function DashboardDriver ()
   return (
 
     <div>
+      <div className="col-md-12 text-right" align="right">
+        <button className="btn btn-dark " onClick={() =>
+        {
+          logOut()
+        }}><i className="fa fa-lock "></i> LOGOUT</button>
+      </div>
       <h1 align="center" className="mt-5 mb-3">
         Dashboard Driver
       </h1>
@@ -45,10 +52,10 @@ export default function DashboardDriver ()
               <img src={book} className="dashicon" alt="..." />
               <a href="/cabDetails">Add My Cab Details</a>
             </h4>
-            {/* <h4 className="mb-5">
-              <img src={rate} className="dashicon" alt="..." />
-              <a href="/rate">Rate a Driver</a>
-            </h4> */}
+            <h4 className="mb-5">
+              <img src={edit} className="dashicon" alt="..." />
+              <a href="/updateCab">Edit Cab</a>
+            </h4>
             <h4 className="mb-5">
               <img src={history} className="dashicon" alt="..." />
               <a href="/startTrip">Trip Requests</a>
@@ -57,18 +64,12 @@ export default function DashboardDriver ()
               <img src={edit} className="dashicon" alt="..." />
               <a href="/updateDriver">Edit my profile</a>
             </h4>
+            <h4 className="mb-5">
+              <img src={icon} className="dashicon" alt="..." />
+              <a href="/deleteCab">Delete Cab</a>
+            </h4>
           </div>
         </div>
-        <center>
-          <button
-            type="button"
-            style={{ backgroundColor: "rgb(111, 136, 168)", color: "white", fontWeight: "bold" }}
-            className="btn success shadow mb-3"
-            onClick={logOut}>
-            LOG OUT
-          </button>
-        </center>
-
       </div>
     </div>
   );

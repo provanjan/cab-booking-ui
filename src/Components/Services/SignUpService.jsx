@@ -1,11 +1,13 @@
 import axios from "axios";
 
-const baseURLAdmin="http://localhost:8080/api/v1/admins";
+const baseURLAdmin = "http://localhost:9090/api/v1/admins";
 
-class SignUpService{
+class SignUpService
+{
 
-    addAdmin(admin){
-        return axios.post(baseURLAdmin+'/',admin);
+    addAdmin (admin)
+    {
+        return axios.post(baseURLAdmin + '/', admin);
     }
 }
 

@@ -39,6 +39,7 @@ class ShowTripBookings extends React.Component {
                                 <th>Distance</th>
                                 <th>Total Amount</th>                               
                                 <th>OTP</th>
+                                <th>Driver ID</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -53,6 +54,7 @@ class ShowTripBookings extends React.Component {
                                         <td>{tripBooking.distanceInKm}</td>
                                         <td>{tripBooking.totalAmount}</td>
                                         <td>{tripBooking.otp}</td>
+                                        <td>{tripBooking.driverId}</td>
                                     </tr>
                                 ))
                             }

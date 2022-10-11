@@ -30,7 +30,9 @@ export default function BookTrip ()
   };
 
   return (
-    <div style={{ marginBottom: "10px" }}>
+    <div>
+      <Link to="/customerDashboard"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
+      <div style={{ marginBottom: "10px" }}>
       <div
         style={{
           padding: "15px",
@@ -173,6 +175,7 @@ export default function BookTrip ()
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

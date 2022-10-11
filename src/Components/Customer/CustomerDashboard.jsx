@@ -37,6 +37,12 @@ export default function CustomerDashboard ()
   }
   return (
     <div alignItems="center" className="dashbg">
+      <div className="col-md-12 text-right" align="right">
+        <button className="btn btn-dark " onClick={() =>
+        {
+          logOut()
+        }}><i className="fa fa-lock "></i> LOGOUT</button>
+      </div>
       <h1 align="center" className="mt-5 mb-3">
         Customer Dashboard
       </h1>
@@ -61,7 +67,7 @@ export default function CustomerDashboard ()
             </h4>
           </div>
         </div>
-        <center>
+        {/* <center>
           <button
             type="button"
             style={{ backgroundColor: "rgb(111, 136, 168)", color: "white", fontWeight: "bold" }}
@@ -69,7 +75,7 @@ export default function CustomerDashboard ()
             onClick={logOut}>
             LOG OUT
           </button>
-        </center>
+        </center> */}
 
       </div>
     </div>

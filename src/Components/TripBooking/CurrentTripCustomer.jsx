@@ -57,7 +57,9 @@ class CurrentTripCustomer extends React.Component
     {
         return (
 
-            <div align="center">
+            <div>
+                <Link to="/customerDashboard"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
+                <div align="center">
                 {
                     this.state.trips.status ? (
                         <div>
@@ -103,6 +105,7 @@ class CurrentTripCustomer extends React.Component
                             </div>
                         </div>
                     )}
+            </div>
             </div>
 
         );

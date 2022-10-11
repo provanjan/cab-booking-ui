@@ -36,7 +36,7 @@ export default function RateDriver ()
       <EndedTripCustomer />
       <form className="container">
         <div class="mb-3 rate">
-          <label for="exampleInputEmail1" class="form-label mt-4 mb-2">
+          <label for="exampleInputEmail1" style={{ color: "whitesmoke", fontSize: "larger", fontWeight: "bold" }} class="form-label mt-4 mb-2">
             Rate the Driver
           </label>
           <input

@@ -38,7 +38,6 @@ class DriverTripDetails extends React.Component
                     .then((response) =>
                     {
                         this.setState({ drivers: response.data });
-                        // this.setState({ cabId: response.data.cabId });
                         DriverService.getCabById(parseInt(response.data.cab.cabId))
                             .then((response) =>
                             {
@@ -49,10 +48,10 @@ class DriverTripDetails extends React.Component
                                 alert("Error occure d");
                             });
                     })
-          {/*          .catch((error) =>
+                    .catch((error) =>
                     {
                         alert("Error occured");
-                    }); */}
+                    });
             })
             .catch((error) =>
             {
@@ -65,44 +64,59 @@ class DriverTripDetails extends React.Component
     render ()
     {
         return (
+            <div>
 
-            <div align="container-fluid">
-                <h3 style={{ color: "darkcyan" }} className="text-center mt-4 mb-2">------Driver Trip Details------</h3>
-                {/* <form class="card-body shadow" onSubmit={this.deleteTrip(parseInt(this.state.trips.tripBookingId))}> */}
-                <div class="card historycard" >
-                    <div class="card-body shadow">
-                        <h4>DRIVER and CAB DETAILS</h4>
-                        <h5 class="card-title">Driver Name</h5>
-                        <p class="card-text">{this.state.drivers.userName} </p>
-                        <hr />
-                        <h5 class="card-title">Cab Type</h5>
-                        <p class="card-text">{this.state.cabs.carType} </p>
+                {/* {
+                    !(this.state.drivers.length > 0) ? ( */}
+                <div align="container-fluid">
+                    <h3 style={{ color: "darkslategray" }} className="text-center mt-4 mb-2">------Driver Trip Details------</h3>
+                    {/* <form class="card-body shadow" onSubmit={this.deleteTrip(parseInt(this.state.trips.tripBookingId))}> */}
+                    <div class="card historycard" >
+                        <div class="card-body shadow">
+                            <h4>DRIVER and CAB DETAILS</h4>
+                            <h5 class="card-title">Driver Name</h5>
+                            <p class="card-text">{this.state.drivers.userName} </p>
+                            <hr />
+                            <h5 class="card-title">Cab Type</h5>
+                            <p class="card-text">{this.state.cabs.carType} </p>
+                        </div>
+                    </div>
+
+                    <div class="card historycard" >
+                        <div class="card-body shadow">
+                            <h4>{this.state.customers.userName}</h4>
+                            <h5 class="card-title">PICKUP POINT</h5>
+                            <p class="card-text">{this.state.trips.fromLocation} </p>
+                            <div className="to">&nbsp; To &nbsp;</div>
+                            <h5 class="card-title">DROP POINT</h5>
+                            <p class="card-text">{this.state.trips.toLocation} </p>
+                        </div>
+                    </div>
+
+                    <div class="card historycard" >
+                        <div class="card-body shadow">
+                            <h5 class="card-title">DATE</h5>
+                            <p class="card-text">{this.state.trips.fromDateTime}</p>
+                            <hr />
+                            <h5 class="card-title">PAYMENT DETAILS</h5>
+                            <p class="card-text">₹ {this.state.trips.totalAmount}</p>
+                            <hr />
+                        </div>
                     </div>
                 </div>
+                {/* ) : (
+                        <div class="card" style={{ width: "60%", align: "center" }}>
 
-                <div class="card historycard" >
-                    <div class="card-body shadow">
-                        <h4>{this.state.customers.userName}</h4>
-                        <h5 class="card-title">PICKUP POINT</h5>
-                        <p class="card-text">{this.state.trips.fromLocation} </p>
-                        <div className="to">&nbsp; To &nbsp;</div>
-                        <h5 class="card-title">DROP POINT</h5>
-                        <p class="card-text">{this.state.trips.toLocation} </p>
-                    </div>
-                </div>
 
-                <div class="card historycard" >
-                    <div class="card-body shadow">
-                        <h5 class="card-title">DATE</h5>
-                        <p class="card-text">{this.state.trips.fromDateTime}</p>
-                        <hr />
-                        <h5 class="card-title">PAYMENT DETAILS</h5>
-                        <p class="card-text">₹ {this.state.trips.totalAmount}</p>
-                        <hr />
-                    </div>
-                </div>
+                            <div class="card-body shadow">
+                                <h3 style={{ color: "darkcyan" }} className="text-center mt-4 mb-2"> You don't have any ride scheduled currently !!</h3>
+                                <hr />
+                                <h1 style={{ color: "gray" }} className="text-center mt-4 mb-2"> Make you Car ready to fly -- !!!! </h1>
+                                <hr />
+                            </div>
+                        </div>
+                    )} */}
             </div>
-
         );
     }
 }

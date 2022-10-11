@@ -3,7 +3,7 @@ import CustomerService from "../Services/CustomerService";
 import TripBookingService from "../Services/TripBookingService";
 import DriverService from "../Services/DriverService";
 import { Link } from "react-router-dom";
-import "./trip.css";
+import "../TripBooking/trip.css";
 
 class TripDetails extends React.Component
 {
@@ -40,9 +40,7 @@ class TripDetails extends React.Component
           .then((response) =>
           {
             this.setState({ drivers: response.data });
-            // this.setState({ cabId: response.data.cabId });
-            console.log(response.data.cab.cabId);
-            DriverService.getCabById(parseInt(response.data.cab.cabId))           
+            DriverService.getCabById(parseInt(response.data.cab.cabId))
               .then((response) =>
               {
                 this.setState({ cabs: response.data });
@@ -52,10 +50,10 @@ class TripDetails extends React.Component
                 alert("Error occure d");
               });
           })
- {/*         .catch((error) =>
+          .catch((error) =>
           {
-            alert(error.data);
-          }); */}
+            alert(error);
+          });
       })
       .catch((error) =>
       {
@@ -83,7 +81,7 @@ class TripDetails extends React.Component
   {
     return (
 
-      <div align="container-fluid" className="card shadow mb-3">
+      <div align="container-fluid" className="card shadow mb-3" style={{ marginBottom: "20px", padding: "10px" }}>
         <h3 style={{ color: "darkcyan" }} className="text-center mt-4 mb-2">------Trip Details------</h3>
         {/* <form class="card-body shadow" onSubmit={this.deleteTrip(parseInt(this.state.trips.tripBookingId))}> */}
         <div class="card historycard" >
@@ -102,8 +100,8 @@ class TripDetails extends React.Component
             <h5 class="card-title">Driver Name</h5>
             <p class="card-text">{this.state.drivers.userName} </p>
             <hr />
-{/*            <h5 class="card-title">Cab Type</h5>
-            <p class="card-text">{this.state.cabs.carType} </p> */}
+            <h5 class="card-title">Cab Type</h5>
+            <p class="card-text">{this.state.cabs.carType} </p>
           </div>
         </div>
         <div class="card historycard" >

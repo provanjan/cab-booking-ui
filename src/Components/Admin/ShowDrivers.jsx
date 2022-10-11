@@ -40,6 +40,7 @@ class ShowDrivers extends React.Component {
                             <th>Availability</th>
                             <th>License No.</th>
                             <th>Rating</th>
+                            <th>Cab Type</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,6 +56,7 @@ class ShowDrivers extends React.Component {
                                     <td>{driver.availability}</td>
                                     <td>{driver.licenseNo}</td>
                                     <td>{driver.rating}</td>
+                                    <td>{driver.cab.carType}</td>
                                 </tr>
                             ))
                         }

@@ -4,12 +4,15 @@ import { useNavigate } from "react-router-dom";
 import AdminControl from "./AdminControl";
 import Statistics from "./Statistics";
 
-function AdminDashboard() {
+function AdminDashboard ()
+{
 
     const navigate = useNavigate()
 
-    useEffect(() => {
-        if (!localStorage.getItem('token')) {
+    useEffect(() =>
+    {
+        if (!localStorage.getItem('token'))
+        {
             navigate('/loginAdmin')
         }
     })
@@ -17,7 +20,8 @@ function AdminDashboard() {
     return (
         <div>
             <div className="col-md-12 bg-light text-right" align="right">
-                <button className="btn btn-dark " onClick={() => {
+                <button className="btn btn-dark " onClick={() =>
+                {
                     console.log("logout clicked")
                     localStorage.removeItem('token')
                     navigate('/loginAdmin')

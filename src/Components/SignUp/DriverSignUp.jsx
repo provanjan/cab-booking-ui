@@ -49,7 +49,7 @@ export default function DriverSignUp ()
                 name="userName"
                 placeholder="Name"
                 className="form-control"
-                {...register("userName", { required: true,minLength:3, maxLength: 20 })}
+                {...register("userName", { required: true, minLength: 3, maxLength: 20 })}
               />
               {errors.userName && errors.userName.type === "required" && (
                 <span className="error">Name is Required</span>
@@ -97,7 +97,7 @@ export default function DriverSignUp ()
                 name="password"
                 placeholder="Password"
                 className="form-control"
-                {...register("password", { required: true,minLength:4, maxLength: 20 })}
+                {...register("password", { required: true, minLength: 4, maxLength: 20 })}
               />
               {errors.password && errors.password.type === "required" && (
                 <span className="error">Password is Required</span>

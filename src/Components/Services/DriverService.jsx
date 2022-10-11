@@ -1,41 +1,71 @@
 import axios from "axios";
-const DRIVER_API_BASE_URL = "http://localhost:8080/api/v1/drivers/";
-const CAB_API_BASE_URL = "http://localhost:8080/api/v1/cabs/";
+const DRIVER_API_BASE_URL = "http://localhost:9090/api/v1/drivers/";
+const CAB_API_BASE_URL = "http://localhost:9090/api/v1/cabs/";
 
 
-class DriverService {
-    addDriver(driver) {
+class DriverService
+{
+    addDriver (driver)
+    {
         return axios.post(DRIVER_API_BASE_URL, driver);
     }
-    getDrivers() {
+    getDrivers ()
+    {
         return axios.get(DRIVER_API_BASE_URL);
     }
-    getDriverById(userId) {
+    getDriverById (userId)
+    {
         return axios.get(DRIVER_API_BASE_URL + userId);
     }
-    updateDriver(driverId, driver) {
+    updateDriver (driverId, driver)
+    {
         return axios.put(DRIVER_API_BASE_URL + driverId, driver);
     }
-    validateDriver(email, password) {
+    validateDriver (email, password)
+    {
         return axios.get(DRIVER_API_BASE_URL + "validate/" + email + "/" + password)
     }
-    deleteDriver(driverId) {
+    deleteDriver (driverId)
+    {
         return axios.delete(DRIVER_API_BASE_URL + driverId)
     }
-    verifyOtp(otp) {
+    verifyOtp (otp)
+    {
         return axios.get(DRIVER_API_BASE_URL + "verifyOtp/" + otp)
     }
-    endTrip(driverId, tripBookingId) {
+    endTrip (driverId, tripBookingId)
+    {
         return axios.get(DRIVER_API_BASE_URL + "endTrip/" + driverId + "/" + tripBookingId);
     }
-    getBestAvailableDrivers() {
+    getBestAvailableDrivers ()
+    {
         return axios.get(DRIVER_API_BASE_URL + "getBestAvailableDrivers")
     }
-    addCabs(cab) {
+    addCabs (cab)
+    {
         return axios.post(CAB_API_BASE_URL, cab);
     }
-    getCabs() {
+    getCabs ()
+    {
         return axios.get(CAB_API_BASE_URL);
+    }
+    getCabById (cabId)
+    {
+        return axios.get(CAB_API_BASE_URL + cabId);
+    }
+    setCabToDriver (cab, driverId)
+    {
+        return axios.post(DRIVER_API_BASE_URL + "setCab/" + driverId, cab)
+    }
+
+    updateCab (cabId, cab)
+    {
+        return axios.put(CAB_API_BASE_URL + cabId, cab);
+    }
+
+    deleteCab (cabId)
+    {
+        return axios.delete(CAB_API_BASE_URL + cabId);
     }
 }
 

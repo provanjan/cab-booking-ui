@@ -36,44 +36,47 @@ export default function StartTrip ()
 
   return (
     <div align="center">
-      <DriverTripDetails />
-      <div class="card historycard" >
-        <div class="card-body shadow">
-          <form className="container">
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">
-                -------Verify otp to start Trip-------
-              </label>
-              <input
-                type="number"
-                name="otp"
-                align="center"
-                style={{ width: "50%" }}
-                placeholder="Enter 4 digit OTP "
-                class="form-control"
-                {...register("otp", {
-                  required: true,
-                  min: 0,
-                })}
-              />
-              {errors.otp && errors.otp.type === "required" && (
-                <span className="error">OTP is Required</span>
-              )}{" "}
-              {errors.otp && errors.otp.type === "max" && (
-                <span className="error">OTP can't be more than 9999</span>
-              )}
-              {errors.otp && errors.otp.type === "min" && (
-                <span className="error">OTP can't be negative</span>
-              )}
-            </div>
-            <button
-              onClick={handleSubmit(startTrip)}
-              type="submit"
-              class="btn btn-primary"
-            >
-              VERIFY OTP
-            </button>
-          </form>
+
+      <div>
+        <DriverTripDetails />
+        <div class="card historycard" >
+          <div class="card-body shadow">
+            <form className="container">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  -------Verify otp to start Trip-------
+                </label>
+                <input
+                  type="number"
+                  name="otp"
+                  align="center"
+                  style={{ width: "50%" }}
+                  placeholder="Enter 3 digit OTP "
+                  class="form-control"
+                  {...register("otp", {
+                    required: true,
+                    min: 0,
+                  })}
+                />
+                {errors.otp && errors.otp.type === "required" && (
+                  <span className="error">OTP is Required</span>
+                )}{" "}
+                {errors.otp && errors.otp.type === "max" && (
+                  <span className="error">OTP can't be more than 9999</span>
+                )}
+                {errors.otp && errors.otp.type === "min" && (
+                  <span className="error">OTP can't be negative</span>
+                )}
+              </div>
+              <button
+                onClick={handleSubmit(startTrip)}
+                type="submit"
+                class="btn btn-primary"
+              >
+                VERIFY OTP
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 

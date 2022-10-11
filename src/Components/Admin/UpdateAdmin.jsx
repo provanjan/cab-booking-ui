@@ -3,9 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Admin/style.css";
 
-class UpdateAdmin extends React.Component {
+class UpdateAdmin extends React.Component
+{
 
-    constructor(props) {
+    constructor(props)
+    {
         super(props);
         this.state = {
             admins: [],
@@ -15,24 +17,29 @@ class UpdateAdmin extends React.Component {
         this.getAdmin = this.getAdmin.bind(this)
     }
 
-    componentDidMount() {
-        AdminService.getAdmins().then(response => {
+    componentDidMount ()
+    {
+        AdminService.getAdmins().then(response =>
+        {
             this.setState({
                 admins: response.data
             })
         })
     }
 
-    getAdmin(event) {
+    getAdmin (event)
+    {
         const id = event.target.id.value;
-        AdminService.getById(id).then(response => {
+        AdminService.getById(id).then(response =>
+        {
             this.setState({
                 admin: response.data
             })
         })
     }
 
-    update(event) {
+    update (event)
+    {
         const id = event.target.id.value;
         const userName = event.target.userName.value;
         const password = event.target.password.value;
@@ -47,12 +54,14 @@ class UpdateAdmin extends React.Component {
             "mobile": mobile,
             "address": address
         }
-        AdminService.update(id, data).then(response => {
+        AdminService.update(id, data).then(response =>
+        {
             alert("Updated Successfully");
         })
     }
 
-    render() {
+    render ()
+    {
 
         return (
             <div>

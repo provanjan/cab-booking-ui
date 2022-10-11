@@ -27,7 +27,9 @@ export default function EditProfile ()
       });
   };
   return (
-    <div className="row loginrow">
+    <div>
+      <Link to="/customerDashboard"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
+      <div className="row loginrow">
       <div class="card logincard col shadow">
         <div class="card-body">
           <h2 class="card-title text-center mb-3">EDIT YOUR PROFILE INFO</h2>
@@ -163,7 +165,7 @@ export default function EditProfile ()
                 style={{ fontWeight: "bold", padding: "10px" }}
                 className="row-3 text-center"
               >
-                <Link type="cancel" className="btn btn-danger" to="/">
+                <Link type="cancel" className="btn btn-danger" to="/customerDashboard">
                   Cancel
                 </Link>
               </div>
@@ -171,6 +173,7 @@ export default function EditProfile ()
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

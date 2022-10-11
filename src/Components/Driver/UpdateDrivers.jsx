@@ -27,7 +27,9 @@ export default function UpdateDrivers ()
             });
     };
     return (
-        <div className="row loginrow">
+        <div>
+            <Link to="/driver"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
+            <div className="row loginrow">
             <div class="card logincard col shadow">
                 <div class="card-body">
                     <h2 class="card-title text-center mb-3">EDIT YOUR PROFILE INFO</h2>
@@ -195,5 +197,7 @@ export default function UpdateDrivers ()
                 </div>
             </div>
         </div>
+        </div>
+
     );
 }

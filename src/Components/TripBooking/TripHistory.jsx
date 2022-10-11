@@ -1,6 +1,7 @@
 import React from "react";
 import AdminService from "../Services/AdminService";
 import CustomerService from "../Services/CustomerService";
+import {Link} from "react-router-dom";
 
 class TripHistory extends React.Component
 {
@@ -39,7 +40,9 @@ class TripHistory extends React.Component
   render ()
   {
     return (
-      <div align="container-fluid">
+      <div>
+        <Link to="/customerDashboard"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
+        <div align="container-fluid">
         <br />
         <h3 className="text-center">-------Trip History-------</h3>
         <br />
@@ -150,6 +153,7 @@ class TripHistory extends React.Component
             </tbody>
           </table>
         </div>
+      </div>
       </div>
     );
   }

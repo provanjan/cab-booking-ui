@@ -28,8 +28,8 @@ class ShowCab extends React.Component
 
         return (
 
-            <div align="container-fluid" >
-                <div align="center" className="mt-5 mb-4"> Cabs Information </div>
+            <div align="container-fluid" style={{ margin: "10px", padding: "20px" }} >
+                <div align="center" className="mt-5 mb-4" style={{ fontSize: "60px" }}> Cabs Information </div>
                 <table className="table table-striped">
                     <thead>
                         <tr>
@@ -46,7 +46,7 @@ class ShowCab extends React.Component
                                     <td>{i + 1}</td>
                                     <td>{cab.carType}</td>
                                     <td>{cab.perKmRate}</td>
-                                    <td>{cab.modelNumber}</td>
+                                    <td>{cab.modelNo}</td>
                                 </tr>
                             ))
                         }

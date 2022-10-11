@@ -44,8 +44,11 @@ import CurrentTripCustomer from "./Components/TripBooking/CurrentTripCustomer";
 import EndedTripCustomer from "./Components/TripBooking/EndedTripCustomer";
 import EditTrip from "./Components/TripBooking/EditTrip";
 import CabDetails from "./Components/Driver/CabDetails";
-import GetCabs from "./Components/Admin/GetCabs";
+import ShowCab from "./Components/Driver/ShowCab";
 import GetCab from "./Components/Admin/GetCab";
+import GetCabs from "./Components/Admin/GetCabs";
+import DeleteCab from "./Components/Driver/DeleteCab";
+import UpdateCab from "./Components/Driver/UpdateCab";
 
 function App ()
 {
@@ -55,34 +58,35 @@ function App ()
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/admin" element={<AdminDashboard/>}/>
-          <Route exact path="/addAdmin" element={<AddAdmin/>}/>
-          <Route exact path="/getAllAdmin" element={<ShowAdmins/>}/>
-          <Route exact path="/deleteAdmin" element={<DeleteAdmin/>}/>
-          <Route exact path="/getAdmin" element={<GetAdmin/>}/>
-          <Route exact path="/allTripBookings" element={<ShowTripBookings/>}/>
-          <Route exact path="/updateAdmin" element={<UpdateAdmin/>}/>
-          <Route exact path="/tripBooking/customer" element={<ShowTripBookingsByCustomer/>}/>
-          <Route exact path="/tripBooking/driver" element={<ShowTripBookingsByDriver/>}/>
-          <Route exact path="tripBooking/date" element={<ShowTripBookingsDateWise/>}/>
-          <Route exact path="/drivers" element={<ShowDrivers/>}/>
-          <Route exact path="/getDriver" element={<ShowDriver/>}/>
-          <Route exact path="/bestDrivers" element={<BestDrivers/>}/>
-          <Route exact path="/customers" element={<ShowCustomers/>}/>
-          <Route exact path="/customer" element={<ShowCustomer/>}/>
-          <Route exact path="/about" element={<About/>}/>
-          <Route exact path="/deleteCustomer" element={<DeleteCustomer/>}/>
-          <Route exact path="deleteDriver" element={<DeleteDriver/>}/>
-          <Route exact path="/loginAdmin" element={<AdminLogin/>}/>
-          <Route exact path="/signUpAdmin" element={<AdminSignUp/>}/>
-          <Route exact path="/service" element={<OurService/>}/>
-          <Route exact path="/contactUs" element={<Contact/>}/>
-          <Route exact path="/loginCustomer" element={<CustomerLogin/>}/>
-          <Route exact path="/loginDriver" element={<DriverLogin/>}/>
-          <Route exact path="/signUpCustomer" element={<CustomerSignUp/>}/>
-          <Route exact path="/signUpDriver" element={<DriverSignUp/>}/>
-          <Route exact path="/customerDashboard" element={<CustomerDashboard/>}/>
-          <Route exact path="/driver" element={<DashboardDriver/>}/>
+          <Route exact path="/admin" element={<AdminDashboard />} />
+          <Route exact path="/addAdmin" element={<AddAdmin />} />
+          <Route exact path="/getAllAdmin" element={<ShowAdmins />} />
+          <Route exact path="/deleteAdmin" element={<DeleteAdmin />} />
+          <Route exact path="/getAdmin" element={<GetAdmin />} />
+          <Route exact path="/allTripBookings" element={<ShowTripBookings />} />
+          <Route exact path="/updateAdmin" element={<UpdateAdmin />} />
+          <Route exact path="/tripBooking/customer" element={<ShowTripBookingsByCustomer />} />
+          <Route exact path="/tripBooking/driver" element={<ShowTripBookingsByDriver />} />
+          <Route exact path="tripBooking/date" element={<ShowTripBookingsDateWise />} />
+          <Route exact path="/drivers" element={<ShowDrivers />} />
+          <Route exact path="/getDriver" element={<ShowDriver />} />
+          <Route exact path="/bestDrivers" element={<BestDrivers />} />
+          <Route exact path="/customers" element={<ShowCustomers />} />
+          <Route exact path="/customer" element={<ShowCustomer />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/showCab" element={<ShowCab />} />
+          <Route exact path="/deleteCustomer" element={<DeleteCustomer />} />
+          <Route exact path="deleteDriver" element={<DeleteDriver />} />
+          <Route exact path="/loginAdmin" element={<AdminLogin />} />
+          <Route exact path="/signUpAdmin" element={<AdminSignUp />} />
+          <Route exact path="/service" element={<OurService />} />
+          <Route exact path="/contactUs" element={<Contact />} />
+          <Route exact path="/loginCustomer" element={<CustomerLogin />} />
+          <Route exact path="/loginDriver" element={<DriverLogin />} />
+          <Route exact path="/signUpCustomer" element={<CustomerSignUp />} />
+          <Route exact path="/signUpDriver" element={<DriverSignUp />} />
+          <Route exact path="/customerDashboard" element={<CustomerDashboard />} />
+          <Route exact path="/driver" element={<DashboardDriver />} />
           <Route exact path="/ride" element={<BookTrip />} />
           <Route exact path="/rate/:userId" element={<RateDriver />} />
           <Route exact path="/tripHistory" element={<TripHistory />} />
@@ -90,15 +94,17 @@ function App ()
           <Route exact path="/delete" element={<CustomerDelete />} />
           <Route exact path="/tripsOfCustomer" element={<TripDetails />} />
           <Route exact path="/updateDriver" element={<UpdateDrivers />} />
-          <Route exact path="/driverDelete" element={<DriverDelete/>}/>
+          <Route exact path="/driverDelete" element={<DriverDelete />} />
           <Route exact path="/startTrip" element={<StartTrip />} />
           <Route exact path="/TripDetailsDriver" element={<TripDetailsDriver />} />
           <Route exact path="/currentTripCustomer" element={<CurrentTripCustomer />} />
           <Route exact path="/endedTripCustomer" element={<EndedTripCustomer />} />
           <Route exact path="/editTrip/:tripBookingId" element={<EditTrip />} />
-          <Route exact path="/cabDetails" element={<CabDetails/>}/>
-          <Route exact path="/getCabs" element={<GetCabs/>}/>
+          <Route exact path="/cabDetails" element={<CabDetails />} />
           <Route exact path="/getCab" element={<GetCab/>}/>
+          <Route exact path="/getCabs" element={<GetCabs/>}/>
+          <Route exact path="/deleteCab" element={<DeleteCab/>}/>
+          <Route exact path="/updateCab" element={<UpdateCab/>}/>
         </Routes>
         <Footer />
       </Router>

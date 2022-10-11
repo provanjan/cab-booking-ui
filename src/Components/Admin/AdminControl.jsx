@@ -54,10 +54,10 @@ function AdminControl() {
               <Nav.Link><NavLink to="/deleteDriver">Delete Driver</NavLink></Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link><NavLink to="/getCabs">Get Cab List</NavLink></Nav.Link>
+              <Nav.Link><NavLink to="/getCabs">Cab List</NavLink></Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link><NavLink to="/getCab">Get Cab By Id</NavLink></Nav.Link>
+              <Nav.Link><NavLink to="/getCab">Cab By Id</NavLink></Nav.Link>
             </Nav.Item>
           </span>
         </div>

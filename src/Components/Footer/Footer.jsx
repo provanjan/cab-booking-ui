@@ -45,8 +45,8 @@ export default function Footer ()
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 col">
 
               <li className="nav-item">
-                <Link className="nav-link foot" to="/service">
-                  Our Service
+                <Link className="nav-link foot" to="/loginCustomer">
+                  Customer Login
                 </Link>
               </li>
 

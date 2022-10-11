@@ -1,12 +1,12 @@
 import DriverService from '../Services/DriverService';
 import { useNavigate } from 'react-router-dom';
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 
-function CabDetails ()
+function AddCab ()
 {
 
     let navigate = useNavigate();
-
     const [cab, setCab] = useState({
         carType: "",
         perKmRate: "",
@@ -20,15 +20,36 @@ function CabDetails ()
         setCab({ ...cab, [event.target.name]: event.target.value });
     };
 
-    const onSubmit = async (e) =>
+    const onSubmit = async (event) =>
     {
-        e.preventDefault();
-        await DriverService.addCabs(cab);
-        navigate("/showCab");
+        event.preventDefault()
+        await DriverService.addCabs(cab)
+            .then((response) =>
+            {
+                console.log(response.data.cabId)
+                alert("Cab Added Succesfully !!")
+
+            })
+            .catch((error) =>
+            {
+                alert("Internal Server Error")
+            });
+        let driverId = window.localStorage.getItem("driverId")
+        DriverService.setCabToDriver(cab, driverId)
+            .then((response) =>
+            {
+                alert("Driver got his cab")
+                navigate("/showCab")
+            })
+            .catch((error) =>
+            {
+                alert("Could not set")
+            })
     };
 
     return (
         <div>
+            <Link to="/driver"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
             <div className="card">
                 <div className="card-body">
                     <h3 className="text-center mt-5 mb-4">Add Your Cab Details:</h3><br />
@@ -77,4 +98,4 @@ function CabDetails ()
     )
 }
 
-export default CabDetails;
+export default AddCab;
