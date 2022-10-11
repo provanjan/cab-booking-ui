@@ -1,11 +1,23 @@
-.customerform {
+.driverform {
     width: 50% !important;
     margin: auto;
-    padding: 20px;
+}
+
+.showtable {
+
+    border: 1px solid rgb(122, 119, 119) !important;
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.updatecard {
+    width: 40%;
 }
 
 .dashboardcard {
-    width: 20%;
+    width: 30%;
     margin: auto;
     border: none;
 }
@@ -17,7 +29,7 @@
 }
 
 .dashboardcard h4 a {
-    color: gray;
+    
     font-size: 23px;
     text-decoration: none !important;
 }
@@ -27,18 +39,3 @@
     color: rgb(111, 136, 168);
     font-size: 25px;
 }
-
-.rate label {
-    font-size: 22px;
-    color: gray;
-}
-
-.rate {
-    width: 40% !important;
-}
-.flex-wrapper{
-    display:flex;
-    min-height:80vh;
-    flex-direction: column;
-    
-  }
