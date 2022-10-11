@@ -1,0 +1,41 @@
+.driverform {
+    width: 50% !important;
+    margin: auto;
+}
+
+.showtable {
+
+    border: 1px solid rgb(122, 119, 119) !important;
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.updatecard {
+    width: 40%;
+}
+
+.dashboardcard {
+    width: 30%;
+    margin: auto;
+    border: none;
+}
+
+.dashicon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.dashboardcard h4 a {
+    
+    font-size: 23px;
+    text-decoration: none !important;
+}
+
+.dashboardcard h4 a:hover {
+    font-size: large;
+    color: rgb(111, 136, 168);
+    font-size: 25px;
+}

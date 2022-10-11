@@ -1,6 +1,7 @@
 import React from "react";
 import AdminService from "../Services/AdminService";
 import Table from 'react-bootstrap/Table';
+import { Link } from "react-router-dom";
 import "../Admin/style.css";
 
 class ShowDrivers extends React.Component {
@@ -24,6 +25,7 @@ class ShowDrivers extends React.Component {
         return (
 
             <div align="container-fluid" className="flex-wrapper">
+                <Link to="/admin"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
                 <h3 align="center"> Drivers Information </h3>
                 <Table striped bordered hover variant="dark">
                     <thead>

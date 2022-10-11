@@ -16,6 +16,7 @@ export default function AdminLogin() {
             .then((Response) => {
                 console.log(Response);
                 alert("Logged in Successfully !!");
+                localStorage.setItem("token",Response.data.token)
                 navigate("/admin");
             })
             .catch((error) => {

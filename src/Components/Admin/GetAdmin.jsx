@@ -1,6 +1,8 @@
 import React from "react";
 import AdminService from "../Services/AdminService";
+import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
+
 import "../Admin/style.css";
 
 class GetAdmin extends React.Component {
@@ -29,7 +31,9 @@ class GetAdmin extends React.Component {
     render() {
 
         return (
-            <div align="container-fluid" className="flex-wrapper">
+            <div>
+                <Link to="/admin"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
+                <div align="container-fluid" className="flex-wrapper">
                 <h3 align="center"> Admin Information </h3>
                 <div className="container form body form-body">
                     <form onSubmit={this.getAdmin}>
@@ -63,6 +67,7 @@ class GetAdmin extends React.Component {
                         }
                     </tbody>
                 </Table>
+            </div>
             </div>
         )
 

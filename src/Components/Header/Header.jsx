@@ -41,21 +41,17 @@ export default function Header ()
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/customerDetails">
+                <Link className="nav-link" to="/service">
                   Services
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/ride">
-                  Book a ride
+                <Link className="nav-link" to="/contactUs">
+                  Contact Us
                 </Link>
               </li>
             </ul>
-            <form className="d-flex loginbtn">
-              <button className="btn btn-outline-success " type="submit">
-                Login / Sign up
-              </button>
-            </form>
+            
           </div>
         </div>
       </nav>

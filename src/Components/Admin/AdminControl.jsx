@@ -21,9 +21,6 @@ function AdminControl() {
           <p>All Functionalities related to admin</p>
           <span className="link-text">
             <Nav.Item>
-              <Nav.Link><NavLink to="/addAdmin">Add Admin</NavLink></Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
               <Nav.Link ><NavLink to="/getAllAdmin">Get All Admins</NavLink> </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -55,6 +52,12 @@ function AdminControl() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link><NavLink to="/deleteDriver">Delete Driver</NavLink></Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link><NavLink to="/getCabs">Get Cab List</NavLink></Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link><NavLink to="/getCab">Get Cab By Id</NavLink></Nav.Link>
             </Nav.Item>
           </span>
         </div>

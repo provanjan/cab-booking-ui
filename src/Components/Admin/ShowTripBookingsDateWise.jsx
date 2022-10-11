@@ -1,6 +1,7 @@
 import React from "react";
 import AdminService from "../Services/AdminService";
 import Table from 'react-bootstrap/Table';
+import { Link } from "react-router-dom";
 import "../Admin/style.css";
 
 class ShowTripBookingsDateWise extends React.Component {
@@ -28,7 +29,9 @@ class ShowTripBookingsDateWise extends React.Component {
     render() {
 
         return (
-            <div align="container-fluid" className="flex-wrapper">
+            <div>
+                <Link to="/admin"><button className="btn btn-success"><i className="fa fa-arrow-left"></i> Back</button></Link>
+                <div align="container-fluid" className="flex-wrapper">
                 <h3 align="center"> Trip Booking Information Based on Date</h3>
                 <div className="container form body form-body">
                     <form onSubmit={this.getTripBooking}>
@@ -47,7 +50,6 @@ class ShowTripBookingsDateWise extends React.Component {
                             <th>From Date & Time</th>
                             <th>Distance</th>
                             <th>Total Amount</th>
-                            <th>Status</th>
                             <th>OTP</th>
                         </tr>
                     </thead>
@@ -63,7 +65,6 @@ class ShowTripBookingsDateWise extends React.Component {
                                     <td>{tripBooking.fromDateTime}</td>
                                     <td>{tripBooking.distanceInKm}</td>
                                     <td>{tripBooking.totalAmount}</td>
-                                    <td>{tripBooking.status}</td>
                                     <td>{tripBooking.otp}</td>
                                 </tr>
                             ))
@@ -71,6 +72,7 @@ class ShowTripBookingsDateWise extends React.Component {
                         }
                     </tbody>
                 </Table>
+            </div>
             </div>
         )
     }

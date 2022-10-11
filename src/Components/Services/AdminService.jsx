@@ -3,6 +3,7 @@ import axios from "axios";
 const baseURL = "http://localhost:8080/api/v1/admins";
 const baseURLDriver="http://localhost:8080/api/v1/drivers";
 const baseURLCustomer="http://localhost:8080/api/v1/customers";
+const baseURLCab="http://localhost:8080/api/v1/cabs";
 
 class AdminService{
 
@@ -68,6 +69,30 @@ class AdminService{
 
     deleteCustomer(customerId){
         return axios.delete(baseURLCustomer+'/'+customerId);
+    }
+
+    userCount(){
+        return axios.get(baseURL+'/count/users');
+    }
+
+    tripsCount(){
+        return axios.get(baseURL+'/count/trips');
+    }
+
+    distanceCount(){
+        return axios.get(baseURL+'/count/distance');
+    }
+
+    revenueCount(){
+        return axios.get(baseURL+'/revenue');
+    }
+
+    getCabs(){
+        return axios.get(baseURLCab+'/');
+    }
+
+    getCab(cabId){
+        return axios.get(baseURLCab+'/'+cabId);
     }
 }
 

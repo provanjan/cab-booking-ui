@@ -1,0 +1,26 @@
+.tripcard {
+    border: 1px solid black;
+}
+
+.historycard {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.to {
+    display: flex;
+    flex-direction: row;
+}
+
+.to:before,
+.to:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid lightsteelblue;
+    margin: auto;
+}
+
+.historybtn button {
+    width: 10%;
+    border-radius: 20px !important;
+}

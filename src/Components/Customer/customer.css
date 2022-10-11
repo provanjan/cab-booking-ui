@@ -1,4 +1,44 @@
 .customerform {
     width: 50% !important;
     margin: auto;
+    padding: 20px;
 }
+
+.dashboardcard {
+    width: 20%;
+    margin: auto;
+    border: none;
+}
+
+.dashicon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.dashboardcard h4 a {
+    color: gray;
+    font-size: 23px;
+    text-decoration: none !important;
+}
+
+.dashboardcard h4 a:hover {
+    font-size: large;
+    color: rgb(111, 136, 168);
+    font-size: 25px;
+}
+
+.rate label {
+    font-size: 22px;
+    color: gray;
+}
+
+.rate {
+    width: 40% !important;
+}
+.flex-wrapper{
+    display:flex;
+    min-height:80vh;
+    flex-direction: column;
+    
+  }

@@ -8,15 +8,15 @@ export default function About() {
     <div>
       <h3 className="text-center pt-5">About Us</h3>
 
-      <div class="card shadow mb-3 aboutcard">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src={cab} class="img-fluid rounded-start p-3 pt-5" alt="..." />
+      <div className="card shadow mb-3 aboutcard">
+        <div className="row g-0">
+          <div className="col-md-4">
+            <img src={cab} className="img-fluid rounded-start p-3 pt-5" alt="..." />
           </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Redefining Mobility for Billions</h5>
-              <p class="card-text">
+          <div className="col-md-8">
+            <div className="card-body">
+              <h5 className="card-title">Redefining Mobility for Billions</h5>
+              <p className="card-text">
                 We are India’s largest mobility platform and one of the world’s
                 largest ride-hailing companies, serving 250+ cities across
                 India, Australia, New Zealand, and the UK. Our app offers
@@ -39,8 +39,8 @@ export default function About() {
                 India’s largest network of kitchens under its Food business.
               </p>
 
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
+              <p className="card-text">
+                <small className="text-muted">Last updated 3 mins ago</small>
               </p>
             </div>
           </div>
